@@ -1,0 +1,44 @@
+package Lista_1;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio_1 {
+	
+    static Scanner s = new Scanner(System.in);
+    static DecimalFormat df = new DecimalFormat("###0.000");
+    
+	public static double volume(double raio) {
+		double result = 0;
+		
+		if(raio >= 0)
+	     return 4.0/3.0 * Math.PI * Math.pow(raio,3);
+		
+			return -1;		
+	}
+	
+
+	public static void main(String[] args) {
+		System.out.println("Calcular volume? S/N");
+		String calcular = s.next();
+		
+		while(calcular.equalsIgnoreCase("S")) {
+			
+			System.out.println("Informe um valor de raio:");
+			double raio = s.nextDouble();
+			double vol = volume(raio);
+			
+			if(vol>= 0)	
+				System.out.println("O volume da esfera é: " + vol);
+				
+				else
+				System.out.println("Não foi possivel calcular");
+				
+			
+			System.out.println("Calcular volume? S/N");
+			calcular = s.next();
+			
+		
+		}
+	}
+
+}
