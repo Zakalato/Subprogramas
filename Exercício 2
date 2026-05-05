@@ -1,0 +1,62 @@
+package Lista_1;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Exercicio_2 {
+	
+	public static void mediaA (double n1, double n2, double n3) {
+		DecimalFormat df = new DecimalFormat("0.0#");
+		double mediaA = (n1 + n2 + n3) / 3.0;
+		System.out.println("Sua média aritmética é: " + df.format(mediaA));
+		
+	}
+
+	public static void mediaP (double n1, double n2, double n3) {
+		DecimalFormat df = new DecimalFormat("0.0#");
+		double mediaP = ((n1*5.0) + (n2*3.0) + (n3*2.0)) / 10.0;
+		System.out.println("Sua média ponderada é: " + df.format(mediaP));
+		
+	}
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Digite sua primeira nota:");
+		double n1 = s.nextDouble();
+		
+		System.out.println("Digite sua segunda nota:");
+		double n2 = s.nextDouble();
+		
+		System.out.println("Digite sua terceira nota:");
+		double n3 = s.nextDouble();
+		
+		System.out.println("Agora digite qual tipo de média você quer:");
+		String tipo = s.next();
+		
+		switch (tipo) {
+		
+		case "A":
+			mediaA(n1,n2,n3);
+			break;
+		case "P":
+			mediaP(n1,n2,n3);
+			break;
+			
+			//O programa pode ir até aqui se você quiser, a parte de baixo é so pra deixar melhor o programa tlgd?
+			
+		case "a":
+			mediaA(n1,n2,n3);
+			break;
+		case "p":
+			mediaP(n1,n2,n3);
+			break;
+		default:
+			System.out.println("Renicie o programa");
+			break;
+		}
+		
+      s.close();
+	}
+	
+
+}
