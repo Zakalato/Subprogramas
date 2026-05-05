@@ -1,0 +1,34 @@
+package Lista_1;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Exercicio_11 {
+	static Scanner s = new Scanner(System.in);
+    static DecimalFormat df = new DecimalFormat("###0.00");
+	
+	public static void pesoideal(String sexo, double altura) {
+		if(sexo.equals("m") || sexo.equals("M")) {
+			double pesoM = 72.7 * altura - 58.0;
+			System.out.println("Seu peso ideal é de: " + df.format(pesoM) + "Kg");
+		}
+		else if (sexo.equals("F") || sexo.equals("f")) {
+			double pesoF = 62.1 * altura - 44.7;
+			System.out.println("Seu peso ideal é de: " + df.format(pesoF) + "Kg");
+		}
+		else
+			System.out.println("Digite f ou m");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Digite sua altura em metros:");
+		double altura = s.nextDouble();
+		
+		System.out.println("Digite seu sexo (M/F)");
+		String sexo = s.next();
+		
+		pesoideal(sexo,altura);
+
+	}
+
+}
