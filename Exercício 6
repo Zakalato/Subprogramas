@@ -1,0 +1,31 @@
+package Lista_1;
+import java.util.Scanner;
+
+public class Exercicio_6 {
+    static Scanner s = new Scanner(System.in);
+    
+    public static void calcular(int anos, int mes, int dias) {
+    	int AD = anos * 365;
+    	
+    	int MD = mes * 30;
+    	
+    	int totaldias = AD + MD + dias;
+    	
+    	System.out.println("Seu total de dias é: " + totaldias);
+    	
+    }
+	public static void main(String[] args) {
+		System.out.println("Digite seus anos:");
+		int anos = s.nextInt();
+		
+		System.out.println("Digite seus meses:");
+		int mes = s.nextInt();
+		
+		System.out.println("Digite seus dias");
+		int dias = s.nextInt();
+		
+		calcular(anos,mes,dias);
+
+	}
+
+}
