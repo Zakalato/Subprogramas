@@ -1,0 +1,40 @@
+package Lista_1;
+
+import java.util.Scanner;
+
+public class Exercicio_7 {
+	
+	static Scanner s = new Scanner(System.in);
+    
+	public static void idades (int idade) {
+		
+	   if(idade >= 5 && idade <=7) {
+		   System.out.println("Infantia A");
+	   }
+	    else if (idade >= 8 && idade <=10) {
+		   System.out.println("Indantil B");
+	   }
+	    else if(idade >= 11 && idade <= 13) {
+	    	System.out.println("Juvenil A");
+	    }
+	    else if(idade >= 14 && idade <= 17) {
+	    	System.out.println("Juvenil B");
+	    }
+	    else if(idade >= 17 && idade <= 120) {
+	    	System.out.println("Adulto");
+	    }
+	    else
+	    	System.out.println("Idade incorreta renicie o programa");
+	       
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println("Digite a sua idade");
+		int idade = s.nextInt();
+		
+		idades(idade);
+		
+	}
+
+}
