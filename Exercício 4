@@ -1,0 +1,43 @@
+package Lista_1;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Exercicio_5 {
+	static Scanner s = new Scanner(System.in);
+    static DecimalFormat df = new DecimalFormat("###0.00");
+    
+	public static void delta(double a, double b, double c) {
+	double delta = Math.sqrt(  Math.pow(b,2) - 4.0 * a * c );
+	
+	if(delta>0) {
+	    raizes(a,b,c,delta);
+	   }
+	else
+		System.out.println("Seu delta deu negativo, impossivel prosseguir");
+	}
+	
+	public static void raizes(double a, double b, double c, double delta) {
+		double bask1 = (-b + delta) / 2.0 * a;
+		
+		double bask2 = (-b - delta) / 2.0 * a;
+		
+		double somaraiz = bask1 + bask2;
+		System.out.println("X1= " + df.format(bask1));
+		System.out.println("X2= " + df.format(bask2));
+		System.out.println("Soma das raízes: " + df.format(somaraiz));
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Digite seu termo A: ");
+		double a = s.nextDouble();
+		
+		System.out.println("Digete seu termo B: ");
+		double b = s.nextDouble();
+		
+		System.out.println("Digite seu termo C: ");
+		double c = s.nextDouble();
+		
+        delta(a,b,c);
+	}
+
+}
