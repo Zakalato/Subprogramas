@@ -1,0 +1,30 @@
+package Lista_1;
+
+import java.util.Scanner;
+
+public class Exercicio_3 {
+	
+	public static boolean ehprimo (int num) {
+		
+		for (int i = 2; i < num; i++) {
+		    if (num % i == 0) {
+		    	System.out.println("F");
+		        return false; 
+		    }
+		}
+		System.out.println("V");
+		return true; 
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		
+		System.out.println("Digite seu valor para ver se ele é primo(V) ou não(F):");
+		int num = s.nextInt();
+	
+		ehprimo(num);
+
+	}
+
+}
